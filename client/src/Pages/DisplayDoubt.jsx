@@ -8,7 +8,7 @@ import {
   useAddVoteToReplyMutation,
   useSortRepliesMutation,
   useDeleteDoubtMutation,
-} from "../services/appApi";
+} from "../Services/AppApi";
 
 import { enqueueSnackbar, SnackbarProvider } from "notistack";
 

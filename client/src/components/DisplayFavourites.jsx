@@ -41,7 +41,7 @@ import {
   useFetchStarredMutation,
   useAddVoteMutation,
   useFetchTagsMutation,
-} from "../services/appApi";
+} from "../Services/AppApi";
 
 import { useSelector } from "react-redux";
 import "../style/Profile.css";
@@ -148,7 +148,7 @@ const DisplayFavourites = () => {
     setIsLoading(true);
     setPosts([]);
 
-    if (selectedTags !== [])
+    if (selectedTags.length !== 0)
       setPosts(() =>
         allPostsData.filter(({ postData }) =>
           selectedTags.every((tag) => postData.tags.includes(tag))

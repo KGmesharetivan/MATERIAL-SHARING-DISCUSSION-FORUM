@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const appApi = createApi({
-  reducerPath: "appApi",
+const AppApi = createApi({
+  reducerPath: "AppApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5000/",
   }),
@@ -207,5 +207,5 @@ export const {
   useAddVoteToReplyMutation,
   useSortRepliesMutation,
   useDeleteDoubtMutation,
-} = appApi;
-export default appApi;
+} = AppApi;
+export default AppApi;

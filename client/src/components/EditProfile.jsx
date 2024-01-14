@@ -4,7 +4,7 @@ import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 import VisibilityRoundedIcon from "@mui/icons-material/VisibilityRounded";
 import VisibilityOffRoundedIcon from "@mui/icons-material/VisibilityOffRounded";
 
-import { useUpdateUserProfileMutation } from "../services/appApi";
+import { useUpdateUserProfileMutation } from "../Services/AppApi";
 
 import { useSelector } from "react-redux";
 
@@ -123,8 +123,8 @@ const EditProfile = () => {
       technicalSkills: skills,
       photo: urlData,
       headers: {
-        authorization: "Bearer " + userToken
-      }
+        authorization: "Bearer " + userToken,
+      },
     }).then(async ({ data, error }) => {
       if (data)
         enqueueSnackbar("Profile updated successfully!", {

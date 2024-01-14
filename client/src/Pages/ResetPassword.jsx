@@ -1,7 +1,7 @@
 import { Alert, Backdrop, Button, CircularProgress, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { useResetPasswordMutation } from "../services/appApi";
+import { useResetPasswordMutation } from "../Services/AppApi";
 
 // import google from "../static/google.png";
 

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
-import Response from "./pages/Response";
-import HomePage from "./pages/HomePage";
-import ForgotPassword from "./pages/ForgotPassword";
-import ResetPassword from "./pages/ResetPassword";
+import Signup from "../src/Pages/Signup";
+import Login from "../src/Pages/Login";
+import Response from "../src/Pages/Response";
+import HomePage from "../src/Pages/HomePage";
+import ForgotPassword from "../src/Pages/ForgotPassword";
+import ResetPassword from "../src/Pages/ResetPassword";
 import CreatePost from "./components/CreatePost";
 
 import { AppContext } from "./context/AppContext";
@@ -17,9 +17,9 @@ import Sidebar from "./components/Sidebar";
 import "./App.css";
 import DisplayProfile from "./components/DisplayProfile";
 import DisplayFavourites from "./components/DisplayFavourites";
-import Discuss from "./pages/Discuss";
+import Discuss from "./Pages/Discuss";
 import EditProfile from "./components/EditProfile";
-import DisplayDoubt from "./pages/DisplayDoubt";
+import DisplayDoubt from "./Pages/DisplayDoubt";
 
 function App() {
   const user = useSelector((state) => state?.user);

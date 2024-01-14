@@ -22,7 +22,7 @@ import { useSelector } from "react-redux";
 import {
   useFetchTagsMutation,
   useCreateDoubtMutation,
-} from "../services/appApi";
+} from "../Services/AppApi";
 import { BootstrapTooltip } from "./Navbar";
 
 const DisplayPostComponent = ({ existingDoubt }) => {

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import {
   useFetchTagsMutation,
   useFetchAllPostsMutation,
-} from "../services/appApi";
+} from "../Services/AppApi";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 
@@ -46,7 +46,7 @@ import "../style/HomePage.css";
 import {
   useAddPostToFavouritesMutation,
   useAddVoteMutation,
-} from "../services/appApi";
+} from "../Services/AppApi";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -142,12 +142,13 @@ const HomePage = () => {
     setLoading(true);
     setPosts([]);
 
-    if (selectedTags !== [])
+    if (selectedTags.length !== 0) {
       setPosts(() =>
         allPostsData.filter(({ postData }) =>
           selectedTags.every((tag) => postData.tags.includes(tag))
         )
       );
+    }
 
     if (searchField !== "")
       setPosts((state) =>
@@ -183,7 +184,18 @@ const HomePage = () => {
 
   return (
     <div className="home-page-outer">
-      {loading && <CircularProgress style={{ width: 40, height: 40, position: "absolute", top: "50%", left: "50%", color: "#1772cd" }} />}
+      {loading && (
+        <CircularProgress
+          style={{
+            width: 40,
+            height: 40,
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            color: "#1772cd",
+          }}
+        />
+      )}
       <Backdrop
         className="backdrop-dialog"
         sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}

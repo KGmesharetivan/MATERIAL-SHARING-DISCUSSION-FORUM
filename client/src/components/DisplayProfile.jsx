@@ -5,7 +5,7 @@ import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import {
   useFetchPostWithOptionsMutation,
   useFetchUserDataMutation,
-} from "../services/appApi";
+} from "../Services/AppApi";
 import ListAltRoundedIcon from "@mui/icons-material/ListAltRounded";
 import HelpOutlineRoundedIcon from "@mui/icons-material/HelpOutlineRounded";
 import GitHubIcon from "@mui/icons-material/GitHub";

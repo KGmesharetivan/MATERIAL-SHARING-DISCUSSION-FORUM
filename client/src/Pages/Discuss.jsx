@@ -1,15 +1,9 @@
-import {
-  Avatar,
-  Button,
-  Chip,
-  IconButton,
-  InputLabel,
-} from "@mui/material";
+import { Avatar, Button, Chip, IconButton, InputLabel } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import {
   useFetchAllDoubtsMutation,
   useFetchTagsMutation,
-} from "../services/appApi";
+} from "../Services/AppApi";
 
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
@@ -102,8 +96,12 @@ const Discuss = () => {
     setDoubts((state) =>
       state.filter(
         (doubt) =>
-          doubt?.doubtDetails?.doubtTitle?.toLowerCase()?.includes(searchField?.toLowerCase()) ||
-          doubt?.ownerInfo?.name?.toLowerCase()?.includes(searchField?.toLowerCase())
+          doubt?.doubtDetails?.doubtTitle
+            ?.toLowerCase()
+            ?.includes(searchField?.toLowerCase()) ||
+          doubt?.ownerInfo?.name
+            ?.toLowerCase()
+            ?.includes(searchField?.toLowerCase())
       )
     );
   }, [selectedTags, allDoubts, searchField]);

@@ -23,7 +23,7 @@ import PersonAddRounded from "@mui/icons-material/PersonAddRounded";
 import ExitToAppRounded from "@mui/icons-material/ExitToAppRounded";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import { useNavigate } from "react-router-dom";
-import { useLogoutMutation } from "../services/appApi";
+import { useLogoutMutation } from "../Services/AppApi";
 import { useSelector } from "react-redux";
 import Star from "@mui/icons-material/Star";
 
@@ -125,7 +125,13 @@ export default function Sidebar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography onClick={() => navigate("/")} style={{ cursor: "pointer"}} variant="h6" noWrap component="div">
+          <Typography
+            onClick={() => navigate("/")}
+            style={{ cursor: "pointer" }}
+            variant="h6"
+            noWrap
+            component="div"
+          >
             CodeStudy
           </Typography>
         </Toolbar>
@@ -335,8 +341,8 @@ export default function Sidebar() {
                 onClick={() => {
                   logoutFunction({
                     headers: {
-                      authorization: "Bearer " + userToken
-                    }
+                      authorization: "Bearer " + userToken,
+                    },
                   });
                   navigate("/login");
                 }}

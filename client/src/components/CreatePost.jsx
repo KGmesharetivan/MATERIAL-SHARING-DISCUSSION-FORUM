@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import {
   useFetchTagsMutation,
   useCreatePostMutation,
-} from "../services/appApi";
+} from "../Services/AppApi";
 
 import { useNavigate } from "react-router-dom";
 
